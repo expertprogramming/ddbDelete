@@ -16,7 +16,7 @@ var client = {
 
 var redshiftClient = new Redshift(client);
 
-var pg_query = "copy mytest from 's3://athenaddbquerydata/patient.json' " + "ACCESS_KEY_ID 'AKIA4UI4OOK4OFFTSB5E' SECRET_ACCESS_KEY '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' FORMAT JSON 'noshred';";
+var pg_query = "copy mytest from 's3://athenaddbquerydata/patient.json' " + "ACCESS_KEY_ID 'access key id' SECRET_ACCESS_KEY 'secret access key' FORMAT JSON 'noshred';";
 
 redshiftClient.query(pg_query, { raw: true }, function(err1, data) {
     //query completed, we can close the connection
